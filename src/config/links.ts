@@ -29,7 +29,7 @@ const REDDIT_DESC =
 
 const PORTFOLIO_URL = "https://ariahallow.dev"
 const PORTFOLIO_DESC =
-    "My professional work, projects, resume, and technical blog posts."
+    "My professional work, projects, resume, and technicals."
 
 // ============================================
 // 👤 EDIT YOUR PROFILE INFO HERE

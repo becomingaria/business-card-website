@@ -5,7 +5,7 @@
 // ============================================
 
 export const madeByJokes = [
-    "1,000 Kobolds Praying to a meteorite for death!",
+    "1,000 Kobolds praying to a meteorite for death!",
     "banging two rocks together!",
     "the trans agenda!",
     "a drunk wizard with a whole lotta issues!",
