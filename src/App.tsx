@@ -23,7 +23,7 @@ function App() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className='w-full max-w-md mx-auto'
+                    className='w-full max-w-md lg:max-w-xl xl:max-w-2xl mx-auto'
                 >
                     {/* Profile section */}
                     <ProfileCard

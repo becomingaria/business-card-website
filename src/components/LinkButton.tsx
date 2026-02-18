@@ -1,12 +1,11 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import type { IconType } from "react-icons"
-import { FaChevronDown } from "react-icons/fa"
+import { CaretDown, type Icon } from "@phosphor-icons/react"
 
 interface LinkButtonProps {
     href: string
     label: string
-    icon: IconType
+    icon: Icon
     color?: string
     index: number
     description?: string
@@ -54,18 +53,19 @@ const LinkButton = ({
             >
                 {/* Header row - clickable to toggle */}
                 <div
-                    className='flex items-center gap-4 px-5 py-4 md:py-5 cursor-pointer'
+                    className='flex items-center gap-4 lg:gap-5 xl:gap-6 px-5 py-4 md:py-5 lg:py-6 xl:py-7 cursor-pointer'
                     onClick={description ? handleToggle : undefined}
                 >
                     {/* Icon container */}
                     <motion.div
-                        className='flex items-center justify-center w-10 h-10 rounded-lg flex-shrink-0'
+                        className='flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 xl:w-16 xl:h-16 rounded-lg lg:rounded-xl flex-shrink-0'
                         style={{
                             backgroundColor: `${color || "var(--color-primary)"}20`,
                         }}
                     >
                         <Icon
-                            className='text-xl md:text-2xl transition-colors duration-300'
+                            weight='duotone'
+                            className='w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 transition-colors duration-300'
                             style={{
                                 color: color || "var(--color-primary-light)",
                             }}
@@ -73,7 +73,7 @@ const LinkButton = ({
                     </motion.div>
 
                     {/* Label */}
-                    <span className='flex-1 text-left font-medium text-text'>
+                    <span className='flex-1 text-left font-medium text-text lg:text-lg xl:text-xl'>
                         {label}
                     </span>
 
@@ -84,9 +84,9 @@ const LinkButton = ({
                             transition={{ duration: 0.2 }}
                             className='p-2'
                         >
-                            <FaChevronDown
-                                className='text-text-muted'
-                                style={{ fontSize: "0.875rem" }}
+                            <CaretDown
+                                weight='bold'
+                                className='w-4 h-4 lg:w-5 lg:h-5 text-text-muted'
                             />
                         </motion.div>
                     )}

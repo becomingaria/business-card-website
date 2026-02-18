@@ -1,11 +1,12 @@
 import {
-    FaDiscord,
-    FaTwitch,
-    FaInstagram,
-    FaReddit,
-    FaBriefcase,
-} from "react-icons/fa"
-import type { IconType } from "react-icons"
+    DiscordLogo,
+    TwitchLogo,
+    InstagramLogo,
+    RedditLogo,
+    Briefcase,
+    type Icon,
+} from "@phosphor-icons/react"
+import profilePicture from "../assets/Profile Picture.png"
 
 // ============================================
 // 🔗 EDIT YOUR LINKS & DESCRIPTIONS HERE
@@ -36,8 +37,7 @@ const PORTFOLIO_DESC =
 export const profileConfig = {
     name: "Aria J Hallow",
     bio: "Hello! I'm Aria, a passionate software developer and content creator. I love building cool projects and sharing my journey with the world. Here are the places you can find me on the internet:",
-    avatarUrl:
-        "https://ariahallow.dev/static/media/me.c94d27a1c7c9420120b5.png", // Add your avatar image URL here
+    avatarUrl: profilePicture,
 }
 
 // ============================================
@@ -47,7 +47,7 @@ interface SocialLink {
     id: string
     label: string
     href: string
-    icon: IconType
+    icon: Icon
     color: string
     description: string
 }
@@ -57,7 +57,7 @@ export const socialLinks: SocialLink[] = [
         id: "discord",
         label: "Discord",
         href: DISCORD_URL,
-        icon: FaDiscord,
+        icon: DiscordLogo,
         color: "#5865F2",
         description: DISCORD_DESC,
     },
@@ -65,7 +65,7 @@ export const socialLinks: SocialLink[] = [
         id: "twitch",
         label: "Twitch",
         href: TWITCH_URL,
-        icon: FaTwitch,
+        icon: TwitchLogo,
         color: "#9146FF",
         description: TWITCH_DESC,
     },
@@ -73,7 +73,7 @@ export const socialLinks: SocialLink[] = [
         id: "instagram",
         label: "Instagram",
         href: INSTAGRAM_URL,
-        icon: FaInstagram,
+        icon: InstagramLogo,
         color: "#E4405F",
         description: INSTAGRAM_DESC,
     },
@@ -81,7 +81,7 @@ export const socialLinks: SocialLink[] = [
         id: "reddit",
         label: "Reddit",
         href: REDDIT_URL,
-        icon: FaReddit,
+        icon: RedditLogo,
         color: "#FF4500",
         description: REDDIT_DESC,
     },
@@ -89,7 +89,7 @@ export const socialLinks: SocialLink[] = [
         id: "portfolio",
         label: "Professional Portfolio",
         href: PORTFOLIO_URL,
-        icon: FaBriefcase,
+        icon: Briefcase,
         color: "#7c3aed",
         description: PORTFOLIO_DESC,
     },
