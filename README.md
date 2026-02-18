@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# Aria's Business Card Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated personal link-in-bio website showcasing social links and contact information.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deployed via Netlify from GitHub.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Animated UI** - Smooth entrance animations and micro-interactions using Framer Motion
+- **Responsive Design** - Scales gracefully from mobile to large desktop displays
+- **Expandable Link Cards** - Each link expands to show descriptions before navigating
+- **Dynamic Background** - Animated floating orbs with gradient effects
+- **Dark Theme** - Purple/violet color scheme with glass-morphism effects
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Technology                                  | Purpose                 |
+| ------------------------------------------- | ----------------------- |
+| [React 19](https://react.dev)               | UI framework            |
+| [TypeScript](https://typescriptlang.org)    | Type safety             |
+| [Vite 7](https://vite.dev)                  | Build tool & dev server |
+| [Tailwind CSS 4](https://tailwindcss.com)   | Utility-first styling   |
+| [Framer Motion](https://motion.dev)         | Animations              |
+| [Phosphor Icons](https://phosphoricons.com) | Duotone icon library    |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/
+│   ├── BackgroundEffects.tsx   # Animated floating orbs
+│   ├── Footer.tsx              # Site footer with joke rotation
+│   ├── LinkButton.tsx          # Expandable social link cards
+│   ├── ProfileCard.tsx         # Avatar, name, and bio section
+│   └── index.ts                # Component exports
+├── config/
+│   ├── jokes.ts                # Footer joke content
+│   └── links.ts                # Social links & profile config
+├── assets/
+│   └── Profile Picture.png     # Avatar image
+├── App.tsx                     # Main app layout
+├── App.css                     # Custom CSS variables
+└── index.css                   # Tailwind imports & base styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Edit `src/config/links.ts` to customize:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Profile Info** - Name, bio, avatar
+- **Social Links** - URLs, descriptions, icons, colors
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+## Deployment
+
+Configured for Netlify via `netlify.toml`:
+
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- **Node version**: 20
+- **SPA redirects**: All routes → `index.html`
+
+## Design Methodology
+
+### Visual Design
+
+- Dark background (#0a0a0f) with purple/violet accent palette
+- Glass-morphism cards with backdrop blur and subtle borders
+- Gradient text for headings using primary-to-accent color flow
+- Glow effects behind interactive elements
+
+### Animation Philosophy
+
+- Staggered entrance animations for visual hierarchy
+- Spring physics for natural, bouncy interactions
+- Subtle hover states that don't distract from content
+- Smooth expand/collapse for link descriptions
+
+### Responsive Approach
+
+- Mobile-first base styles
+- Progressive enhancement at `md`, `lg`, and `xl` breakpoints
+- Avatar, icons, and text scale proportionally on larger screens
+- Max-width container prevents over-stretching on ultrawide displays
+
+## License
+
+MIT

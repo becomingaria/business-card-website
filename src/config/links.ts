@@ -17,7 +17,7 @@ const DISCORD_DESC =
 
 const TWITCH_URL = "https://www.twitch.tv/becoming_aria"
 const TWITCH_DESC =
-    "Watch me code live, play games, and hang out with the community. Streams weekly!"
+    "Watch me code live, play games, and hang out with the community. Weekly Streams coming soon!"
 
 const INSTAGRAM_URL = "https://www.instagram.com/becoming_aria"
 const INSTAGRAM_DESC =
