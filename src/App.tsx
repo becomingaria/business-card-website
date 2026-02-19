@@ -50,11 +50,11 @@ function App() {
                                 description={link.description}
                             />
                         ))}
+
+                        {/* Jokes beneath links */}
+                        <Footer />
                     </motion.div>
                 </motion.div>
-
-                {/* Footer */}
-                <Footer />
             </main>
         </div>
     )

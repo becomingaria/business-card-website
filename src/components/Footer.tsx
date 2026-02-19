@@ -77,12 +77,11 @@ const Footer = () => {
     }, [displayText, isTyping, isDeleting])
 
     return (
-        <motion.footer
+        <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className='pb-6 text-left w-full max-w-md mx-auto'
-            style={{ marginTop: "6rem" }}
+            className='pt-4 text-left w-full min-h-12 md:min-h-[3.75rem]'
         >
             <p className='text-text-muted/50 text-xs md:text-sm font-mono break-words'>
                 <span className='text-secondary/70'>
@@ -100,7 +99,7 @@ const Footer = () => {
                     </motion.span>
                 </span>
             </p>
-        </motion.footer>
+        </motion.div>
     )
 }
 

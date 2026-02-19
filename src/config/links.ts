@@ -4,6 +4,8 @@ import {
     InstagramLogo,
     RedditLogo,
     Briefcase,
+    Sword,
+    Camera,
     type Icon,
 } from "@phosphor-icons/react"
 import profilePicture from "../assets/Profile Picture.png"
@@ -28,8 +30,15 @@ const REDDIT_DESC =
     "Join discussions, see my posts, and connect with me on various subreddits."
 
 const PORTFOLIO_URL = "https://ariahallow.dev"
-const PORTFOLIO_DESC =
-    "My professional work, projects, resume, and technicals."
+const PORTFOLIO_DESC = "My professional software development work, projects, resume, and technicals."
+
+const IMUSTKILL_URL = "https://imustkill.com/"
+const IMUSTKILL_DESC =
+    "I Must Kill - A tabletop roleplaying experience all about hunting monsters!"
+
+const MODELING_URL = "https://ariajacinto.com"
+const MODELING_DESC =
+    "My modeling portfolio - an intimate exploration of the human body and the transgender experience."
 
 // ============================================
 // 👤 EDIT YOUR PROFILE INFO HERE
@@ -92,5 +101,21 @@ export const socialLinks: SocialLink[] = [
         icon: Briefcase,
         color: "#7c3aed",
         description: PORTFOLIO_DESC,
+    },
+    {
+        id: "imustkill",
+        label: "I Must Kill",
+        href: IMUSTKILL_URL,
+        icon: Sword,
+        color: "#dc2626",
+        description: IMUSTKILL_DESC,
+    },
+    {
+        id: "modeling",
+        label: "Modeling Portfolio",
+        href: MODELING_URL,
+        icon: Camera,
+        color: "#ec4899",
+        description: MODELING_DESC,
     },
 ]
