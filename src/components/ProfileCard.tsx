@@ -35,7 +35,7 @@ const ProfileCard = ({ name, bio, avatarUrl }: ProfileCardProps) => {
                         <img
                             src={avatarUrl}
                             alt={name}
-                            className='w-full h-full object-cover scale-105 origin-top-left'
+                            className='w-full h-full object-cover object-[60%_65%]'
                         />
                     ) : (
                         /* Placeholder avatar */

@@ -8,7 +8,7 @@ import {
     Camera,
     type Icon,
 } from "@phosphor-icons/react"
-import profilePicture from "../assets/Profile Picture.png"
+import profilePicture from "../assets/Profile Picture.webp"
 
 // ============================================
 // 🔗 EDIT YOUR LINKS & DESCRIPTIONS HERE
