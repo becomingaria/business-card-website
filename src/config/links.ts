@@ -59,9 +59,11 @@ interface SocialLink {
     icon: Icon
     color: string
     description: string
+    // Set to true to keep a link in the config but hide it from the page.
+    hidden?: boolean
 }
 
-export const socialLinks: SocialLink[] = [
+const allSocialLinks: SocialLink[] = [
     {
         id: "discord",
         label: "Discord",
@@ -93,6 +95,7 @@ export const socialLinks: SocialLink[] = [
         icon: RedditLogo,
         color: "#FF4500",
         description: REDDIT_DESC,
+        hidden: true,
     },
     {
         id: "portfolio",
@@ -119,3 +122,7 @@ export const socialLinks: SocialLink[] = [
         description: MODELING_DESC,
     },
 ]
+
+export const socialLinks: SocialLink[] = allSocialLinks.filter(
+    (link) => !link.hidden,
+)
