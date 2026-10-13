@@ -95,7 +95,6 @@ const allSocialLinks: SocialLink[] = [
         icon: RedditLogo,
         color: "#FF4500",
         description: REDDIT_DESC,
-        hidden: true,
     },
     {
         id: "portfolio",
